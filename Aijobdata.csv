@@ -1,0 +1,96 @@
+Company,Industry,Month,Job_Postings,Avg_Salary_USD,Top_Role
+Google,Big Tech,Oct-25,1420,185000,AI Research Scientist
+Google,Big Tech,Nov-25,1550,188000,ML Engineer
+Google,Big Tech,Dec-25,1480,190000,GenAI Developer
+Google,Big Tech,Jan-26,1650,192000,AI Agent Architect
+Google,Big Tech,Feb-26,1720,195000,MLOps Engineer
+Microsoft,Big Tech,Oct-25,1200,175000,Applied AI Engineer
+Microsoft,Big Tech,Nov-25,1350,178000,Data Scientist
+Microsoft,Big Tech,Dec-25,1410,182000,Azure AI Specialist
+Microsoft,Big Tech,Jan-26,1580,185000,AI Product Manager
+Microsoft,Big Tech,Feb-26,1690,188000,Prompt Engineer
+Meta,Social Media,Oct-25,980,195000,PyTorch Developer
+Meta,Social Media,Nov-25,1050,197000,Computer Vision Lead
+Meta,Social Media,Dec-25,1120,200000,AI Ethics Officer
+Meta,Social Media,Jan-26,1250,205000,LLM Researcher
+Meta,Social Media,Feb-26,1340,210000,Spatial Intelligence Eng
+OpenAI,AI Research,Oct-25,310,210000,Technical Staff
+OpenAI,AI Research,Nov-25,350,215000,Model Alignment Eng
+OpenAI,AI Research,Dec-25,380,220000,Scaling Laws Researcher
+OpenAI,AI Research,Jan-26,450,230000,Robotics Engineer
+OpenAI,AI Research,Feb-26,520,245000,Agentic Systems Lead
+Amazon,E-commerce,Oct-25,1850,165000,AWS AI Consultant
+Amazon,E-commerce,Nov-25,1920,168000,Robotics Specialist
+Amazon,E-commerce,Dec-25,2100,172000,Supply Chain AI Lead
+Amazon,E-commerce,Jan-26,2300,175000,Data Engineer
+Amazon,E-commerce,Feb-26,2450,180000,ML Infrastructure Eng
+NVIDIA,Hardware,Oct-25,850,190000,CUDA Developer
+NVIDIA,Hardware,Nov-25,920,193000,Deep Learning Engineer
+NVIDIA,Hardware,Dec-25,980,196000,Chip Design AI Eng
+NVIDIA,Hardware,Jan-26,1100,205000,Omniverse Specialist
+NVIDIA,Hardware,Feb-26,1250,215000,AI Compiler Engineer
+TCS,IT Services,Oct-25,4500,65000,AI Transformation Consultant
+TCS,IT Services,Nov-25,4800,68000,Data Analyst
+TCS,IT Services,Dec-25,5200,72000,Cloud AI Migrator
+TCS,IT Services,Jan-26,6100,75000,GenAI Implementation Lead
+TCS,IT Services,Feb-26,7500,82000,AI Support Engineer
+Anthropic,AI Research,Oct-25,150,200000,Interpretability Researcher
+Anthropic,AI Research,Nov-25,180,205000,Constitutional AI Eng
+Anthropic,AI Research,Dec-25,210,210000,Safety Engineer
+Anthropic,AI Research,Jan-26,260,220000,Model Trainer
+Anthropic,AI Research,Feb-26,310,235000,Systems Policy Lead
+Adobe,Software,Oct-25,420,160000,Firefly Research Eng
+Adobe,Software,Nov-25,450,165000,Creative AI Developer
+Adobe,Software,Dec-25,480,168000,UX Designer (AI Tools)
+Adobe,Software,Jan-26,540,175000,Image Generation Scientist
+Adobe,Software,Feb-26,600,182000,Video AI Specialist
+Tesla,Automotive,Oct-25,280,175000,Autopilot Engineer
+Tesla,Automotive,Nov-25,310,178000,FSD Training Eng
+Tesla,Automotive,Dec-25,340,182000,Neural Network Architect
+Tesla,Automotive,Jan-26,400,190000,Optimus AI Developer
+Tesla,Automotive,Feb-26,460,205000,Edge AI Specialist
+Salesforce,Software,Oct-25,650,155000,Einstein AI Architect
+Salesforce,Software,Nov-25,680,158000,CRM Data Scientist
+Salesforce,Software,Dec-25,720,162000,Agentforce Developer
+Salesforce,Software,Jan-26,850,170000,Enterprise AI Lead
+Salesforce,Software,Feb-26,940,180000,NLP Engineer
+Infosys,IT Services,Oct-25,3200,62000,Automation Specialist
+Infosys,IT Services,Nov-25,3500,64000,Data Modeler
+Infosys,IT Services,Dec-25,3800,67000,AI Application Dev
+Infosys,IT Services,Jan-26,4500,70000,Knowledge Graph Eng
+Infosys,IT Services,Feb-26,5200,78000,AI Delivery Manager
+IBM,Technology,Oct-25,900,145000,WatsonX Engineer
+IBM,Technology,Nov-25,950,148000,AI Governance Lead
+IBM,Technology,Dec-25,1050,152000,Quantum AI Researcher
+IBM,Technology,Jan-26,1200,160000,Mainframe AI Modernizer
+IBM,Technology,Feb-26,1350,172000,Hybrid Cloud AI Architect
+Apple,Consumer Tech,Oct-25,550,185000,Siri Intelligence Eng
+Apple,Consumer Tech,Nov-25,600,188000,On-device ML Researcher
+Apple,Consumer Tech,Dec-25,650,192000,Private Cloud Compute Eng
+Apple,Consumer Tech,Jan-26,780,200000,Visual Intelligence Lead
+Apple,Consumer Tech,Feb-26,890,215000,AI Privacy Engineer
+Palantir,Data Analytics,Oct-25,220,170000,Forward Deployed Eng
+Palantir,Data Analytics,Nov-25,250,175000,AIP Solution Architect
+Palantir,Data Analytics,Dec-25,290,180000,Ontology Engineer
+Palantir,Data Analytics,Jan-26,340,195000,Defense AI Specialist
+Palantir,Data Analytics,Feb-26,410,210000,Strategic AI Lead
+Databricks,Data Infrastructure,Oct-25,180,195000,Mosaic AI Engineer
+Databricks,Data Infrastructure,Nov-25,210,200000,Lakehouse Architect
+Databricks,Data Infrastructure,Dec-25,240,205000,Unity Catalog Dev
+Databricks,Data Infrastructure,Jan-26,290,215000,Compound AI Specialist
+Databricks,Data Infrastructure,Feb-26,360,230000,Vector DB Expert
+Snowflake,Data Cloud,Oct-25,160,185000,Cortex AI Developer
+Snowflake,Data Cloud,Nov-25,190,188000,Data Governance Lead
+Snowflake,Data Cloud,Dec-25,220,192000,Streamlit App Developer
+Snowflake,Data Cloud,Jan-26,270,205000,Arctic Model Engineer
+Snowflake,Data Cloud,Feb-26,330,220000,LLM Ops Specialist
+Scale AI,Data Labeling,Oct-25,140,160000,RLHF Specialist
+Scale AI,Data Labeling,Nov-25,170,165000,Data Quality Lead
+Scale AI,Data Labeling,Dec-25,200,170000,Expert Annotator Manager
+Scale AI,Data Labeling,Jan-26,250,185000,Synthetic Data Eng
+Scale AI,Data Labeling,Feb-26,300,200000,Model Evaluation Lead
+Mistral AI,AI Research,Oct-25,80,180000,Model Optimizer
+Mistral AI,AI Research,Nov-25,100,185000,Efficiency Researcher
+Mistral AI,AI Research,Dec-25,120,190000,Open Source Advocate
+Mistral AI,AI Research,Jan-26,160,205000,Multimodal Expert
+Mistral AI,AI Research,Feb-26,210,225000,Distributed Systems Eng
