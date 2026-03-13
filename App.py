@@ -3,60 +3,55 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Page configuration
-st.set_page_config(page_title="DataViz Dashboard", layout="wide")
+# Page Config
+st.set_page_config(page_title="AI Job Market Analysis", layout="wide")
 
-st.title("📊 Simple Dataset Visualizer")
-st.write("Upload a CSV file to explore and visualize your data instantly.")
+st.title("🤖 AI Job Rising Dashboard (Last 5 Months)")
+st.write("Visualizing the growth of AI roles across top tech companies.")
 
-# File uploader
-uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type="csv")
-
-if uploaded_file is not None:
-    # Load data
-    df = pd.read_csv(uploaded_file)
+# Load the dataset
+try:
+    df = pd.read_csv('Aijobdata.csv')
     
-    # Sidebar - Data Preview Settings
-    st.sidebar.header("Settings")
-    if st.sidebar.checkbox("Show Raw Data"):
-        st.subheader("Raw Data")
-        st.dataframe(df.head(10))
-
-    # Visualization Section
-    st.subheader("Custom Visualizations")
+    # Sidebar Filters
+    st.sidebar.header("Filter Data")
+    industries = st.sidebar.multiselect(
+        "Select Industry", 
+        options=df["Industry"].unique(), 
+        default=df["Industry"].unique()
+    )
     
-    columns = df.columns.tolist()
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        chart_type = st.selectbox("Select Chart Type", ["Line Plot", "Bar Chart", "Scatter Plot", "Histogram"])
-        x_axis = st.selectbox("Select X-axis", columns)
-        
-    with col2:
-        y_axis = st.selectbox("Select Y-axis", columns)
-        color = st.color_picker("Pick a chart color", "#6C63FF")
+    filtered_df = df[df["Industry"].isin(industries)]
 
-    # Plotting Logic
-    fig, ax = plt.subplots(figsize=(10, 5))
-    
-    if chart_type == "Line Plot":
-        ax.plot(df[x_axis], df[y_axis], color=color, marker='o')
-    elif chart_type == "Bar Chart":
-        ax.bar(df[x_axis], df[y_axis], color=color)
-    elif chart_type == "Scatter Plot":
-        ax.scatter(df[x_axis], df[y_axis], color=color)
-    elif chart_type == "Histogram":
-        ax.hist(df[x_axis], bins=20, color=color, edgecolor="white")
-        plt.xlabel(x_axis)
+    # Layout: Top Metrics
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Companies", len(filtered_df["Company"].unique()))
+    col2.metric("Total Postings", filtered_df["Job_Postings"].sum())
+    col3.metric("Avg Salary", f"${filtered_df['Avg_Salary_USD'].mean():,.0f}")
 
-    # Aesthetics
-    plt.xticks(rotation=45)
-    plt.title(f"{chart_type} of {y_axis} vs {x_axis}")
-    plt.tight_layout()
+    # Layout: Charts
+    chart_col1, chart_col2 = st.columns(2)
 
-    # Display the plot
-    st.pyplot(fig)
+    with chart_col1:
+        st.subheader("Job Postings Trend")
+        fig, ax = plt.subplots()
+        # Grouping by month to see rising trend
+        trend = filtered_df.groupby("Month")["Job_Postings"].sum().reset_index()
+        # Ensuring months are in logical order for a 5-month view
+        sns.lineplot(data=trend, x="Month", y="Job_Postings", marker="o", color="#0078D4", ax=ax)
+        plt.xticks(rotation=45)
+        st.pyplot(fig)
 
-else:
-    st.info("💡 Please upload a CSV file from the sidebar to get started.")
+    with chart_col2:
+        st.subheader("Industry-wise Salary Distribution")
+        fig, ax = plt.subplots()
+        sns.barplot(data=filtered_df, x="Industry", y="Avg_Salary_USD", palette="viridis", ax=ax)
+        plt.xticks(rotation=45)
+        st.pyplot(fig)
+
+    # Detailed Data View
+    st.subheader("Company Wise Breakdown")
+    st.dataframe(filtered_df, use_container_width=True)
+
+except FileNotFoundError:
+    st.error("Error: 'Aijobdata.csv' not found. Please ensure the file is in the same directory.")
